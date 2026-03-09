@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './sections/Navigation';
 
 // Economy report sections
@@ -73,12 +73,12 @@ function LivelihoodReport() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<EconomyReport />} />
         <Route path="/livelihood" element={<LivelihoodReport />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
