@@ -73,12 +73,12 @@ function LivelihoodReport() {
 
 function App() {
   return (
-    // 关键点：显式告诉路由，你的根路径是从 /TrafficInsight/ 开始的
-    <Router basename={import.meta.env.BASE_URL}>
+    // 彻底移除 basename 属性
+    <Router> 
       <Routes>
         <Route path="/" element={<EconomyReport />} />
         <Route path="/livelihood" element={<LivelihoodReport />} />
-        {/* 兜底路由：如果路径都不匹配，自动跳转回首页 */}
+        {/* 兜底路由 */}
         <Route path="*" element={<EconomyReport />} />
       </Routes>
     </Router>
